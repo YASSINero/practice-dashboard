@@ -1,0 +1,60 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.major-container {
+    max-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr 2fr;
+    grid-template-areas: 
+                        "side tool"
+                        "side content"
+                        "side content";
+    gap: 0px 0px;
+    /* justify-items: center; */
+}
+
+.heading {
+    grid-area: tool;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+            "bar"
+            "btn";
+}
+
+.toolbar {
+    grid-area: bar;
+}
+
+.container-btn {
+    grid-area: btn;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "usr btns";
+}
+
+.container-btn > h3 {
+    grid-area: usr;
+}
+
+.content {
+    grid-area: content;
+}
+
+.sidebar {
+    grid-area: side;
+}
+
+
+
