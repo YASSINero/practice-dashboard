@@ -50,6 +50,25 @@ body {
 
 .content {
     grid-area: content;
+    background-color: #e2e8f0;
+    display: grid;
+    padding: 2em;
+    grid-template-columns: repeat(auto-fill, minmax(45ch,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(1em ,33%));
+    gap: 2em;
+
+}
+
+.content > h3 {
+    grid-column: span 4;
+}
+
+
+.content > div {
+    border-left: 1rem solid #f0b429;
+    border-radius: 1em;
+    background-color: white;
+
 }
 
 .sidebar {
