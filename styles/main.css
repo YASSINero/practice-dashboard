@@ -1,9 +1,5 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-}
-
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -54,7 +50,7 @@ body {
     display: grid;
     padding: 2em;
     grid-template-columns: repeat(auto-fill, minmax(45ch,1fr));
-    grid-template-rows: repeat(auto-fill, minmax(1em ,33%));
+    grid-template-rows: 3em repeat(auto-fill, minmax(6em ,33%));
     gap: 2em;
 
 }
@@ -68,12 +64,32 @@ body {
     border-left: 1rem solid #f0b429;
     border-radius: 1em;
     background-color: white;
+    padding: 1em 1em 0;
 
 }
 
 .sidebar {
     grid-area: side;
+    background-color: #1992d4;
+    color: white;
+    font-weight: bold;
+    font-size: 17pt;
 }
 
+.sidebar > ul {
+    list-style-type: none;
+}
 
+li {
+    margin: 1rem 0 2rem;
+}
 
+li > a,
+li > a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+i {
+    padding-right: 3rem;
+}
