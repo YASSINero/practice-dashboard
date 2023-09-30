@@ -30,6 +30,39 @@ body {
 
 .toolbar {
     grid-area: bar;
+    display: grid;
+    align-content: center;
+    grid-template-columns: 2fr 1fr;
+}
+
+.toolbar input {
+    background-color: #e2e8f0;
+    border-radius: 1em;
+    border-style: none;
+    outline: none;
+    
+    width: 100%;
+    padding: 0 1em;
+    margin: 0 2em;
+}
+.toolbar input:hover {
+    background-color: #bfc4ca;
+}
+
+.toolbar > i {
+    margin: 1em 3em 2em;
+    /* justify-self: center; */
+}
+.toolbar > i::before {
+    font-size: 18pt;
+}
+
+.toolbar > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
+    font-size: 18pt;
 }
 
 .container-interface {
@@ -39,14 +72,15 @@ body {
     grid-template-rows: 1fr;
     grid-template-areas: "usr btns";
     align-items: center;
-    padding: 2em 3em;
+    padding: 1em 3em;
 }
 
-.container-interface img {
+img {
     clip-path: circle(40%);
     /* border-radius: 50%; */
-    width: 4.5em;
-    height: 45px;
+    width: 63px;
+    height: 44px;
+    /* margin: 1em 0; */
 }
 
 .container-interface p {
@@ -58,7 +92,7 @@ body {
 
 .container-interface button {
     font-size: large;
-    font-weight: bold;
+    font-weight: boldd;
     color: #fff;
     background-color: #1992d4;
 
