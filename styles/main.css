@@ -6,7 +6,7 @@ body {
 
 .major-container {
     max-width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 3fr 2fr;
@@ -21,6 +21,10 @@ body {
 .heading {
     grid-area: tool;
     display: grid;
+    
+    z-index: 2;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.11);
+
     grid-template-columns: 1fr;
     /* grid-template-rows: 1fr 1fr; */
     grid-template-areas: 
@@ -33,6 +37,7 @@ body {
     display: grid;
     align-content: center;
     grid-template-columns: 2fr 1fr;
+    margin: 1em 0;
 }
 
 .toolbar input {
@@ -50,7 +55,7 @@ body {
 }
 
 .toolbar > i {
-    margin: 1em 3em 2em;
+    margin: 1em 3em 1em;
     /* justify-self: center; */
 }
 .toolbar > i::before {
@@ -73,6 +78,7 @@ body {
     grid-template-areas: "usr btns";
     align-items: center;
     padding: 1em 3em;
+    margin: 1em 0;
 }
 
 img {
@@ -92,7 +98,7 @@ img {
 
 .container-interface button {
     font-size: large;
-    font-weight: boldd;
+    font-weight: bold;
     color: #fff;
     background-color: #1992d4;
 
@@ -123,10 +129,10 @@ img {
     background-color: #e2e8f0;
     display: grid;
     padding: 2em;
-    grid-template-columns: repeat(auto-fill, minmax(45ch,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(30%,1fr));
     grid-template-rows: 3em repeat(auto-fill, minmax(6em ,33%));
     gap: 2em;
-
+    overflow-y: scroll;
 }
 
 .content > h3 {
@@ -137,9 +143,12 @@ img {
 .content > div {
     border-left: 1rem solid #f0b429;
     border-radius: 1em;
+    
     background-color: white;
-    padding: 1em 1em 0;
+    box-shadow: 2px 3px 7px 0px rgba(0, 0, 0, 0.11);
 
+    padding: 1em 1em 0;
+    overflow-y: scroll;
 }
 
 .sidebar {
@@ -147,6 +156,7 @@ img {
     display: grid;
     grid-template-rows: 1fr 3fr 2fr;
 
+    z-index: 3;
     background-color: #1992d4;
     color: white;
     font-weight: bold;
